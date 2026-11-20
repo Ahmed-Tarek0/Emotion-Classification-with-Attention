@@ -221,3 +221,22 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# fine-tuned model weights - too large for a normal git push (see README)
+deployment/backend/finetuned_transformer/
+
+# env files
+.env
+deployment/backend/.env
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# jupyter
+.ipynb_checkpoints/
+
+# os
+.DS_Store
