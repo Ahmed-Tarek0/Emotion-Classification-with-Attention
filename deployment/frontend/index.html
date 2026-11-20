@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Emotion Classifier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="blob blob-4"></div>
+
+  <main class="card">
+    <header class="card-header">
+      <div class="badge">🎭</div>
+      <div>
+        <h1>Emotion Classifier</h1>
+        <p class="subtitle">Understand the emotion behind any piece of text.</p>
+      </div>
+    </header>
+
+    <div class="emotion-chips">
+      <span class="chip" style="--c: 244,180,0">😄 Joy</span>
+      <span class="chip" style="--c: 74,127,232">😢 Sadness</span>
+      <span class="chip" style="--c: 230,57,70">😠 Anger</span>
+      <span class="chip" style="--c: 131,56,236">😨 Fear</span>
+      <span class="chip" style="--c: 251,133,0">😲 Surprise</span>
+      <span class="chip" style="--c: 82,183,136">🤢 Disgust</span>
+    </div>
+
+    <textarea id="text-input" placeholder="Type a sentence, e.g. “I can't believe you did this!”"></textarea>
+
+    <div class="button-row">
+      <button id="classify-btn" class="btn-primary">
+        <span class="btn-label">Analyze</span>
+        <span class="spinner" aria-hidden="true"></span>
+      </button>
+      <button id="clear-btn" class="btn-secondary" type="button">Clear</button>
+    </div>
+
+    <div id="error" role="alert"></div>
+
+    <section id="result">
+      <div class="top-emotion" id="top-emotion">
+        <div class="emoji-circle" id="emoji-circle">
+          <span id="top-emoji"></span>
+        </div>
+        <div>
+          <div class="label" id="top-label"></div>
+          <div class="conf" id="top-conf"></div>
+        </div>
+      </div>
+      <div id="bars"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
